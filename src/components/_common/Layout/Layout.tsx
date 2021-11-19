@@ -23,6 +23,8 @@ const Layout = () => {
   const { userNav, activeNavItem } = useNav();
   const { pathname } = useLocation();
 
+  console.log(pathname);
+
   return (
     <>
       <Wrapper>
