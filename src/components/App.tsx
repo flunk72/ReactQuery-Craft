@@ -8,6 +8,7 @@ import queryClient from "../queryClient";
 import Layout from "./_common/Layout";
 import { Styles } from "./App.styled";
 import "antd/dist/antd.css";
+import Home from "./Home";
 
 export default function App() {
   return (
@@ -28,7 +29,7 @@ export default function App() {
 }
 
 function Main() {
-  // if (!user) return <div>Авторизация</div>;
+  if (window.location.href === "http://localhost:3000/") return <Home />;
   return <RatingCraft />;
 }
 

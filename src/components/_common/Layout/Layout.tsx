@@ -14,7 +14,6 @@ import {
   Logo,
   Avatar,
 } from "./Layout.styled";
-import { UserOutlined } from "@ant-design/icons";
 import { ExitIcon, BeerIcon, CraftIcon, SettingsIcon } from "../../_assets";
 import CraftBeer from "../../CraftBeer";
 import Settings from "../../Settings";
@@ -23,7 +22,9 @@ const Layout = () => {
   const { userNav, activeNavItem } = useNav();
   const { pathname } = useLocation();
 
-  console.log(pathname);
+  const onExit = () => {
+    window.location.assign("http://localhost:3000/");
+  };
 
   return (
     <>
@@ -34,7 +35,6 @@ const Layout = () => {
           </Logo>
           {userNav.map((link) => (
             <MenuItem key={link.path} to={link.path}>
-              <div>{link.icon}</div>
               <u>{link.name}</u>
             </MenuItem>
           ))}
@@ -45,8 +45,8 @@ const Layout = () => {
           <HeaderWrapper>
             <Title>{activeNavItem?.name}</Title>
             <HeaderAccount>
-              <Avatar size={36} icon={<UserOutlined />} />
-              <Logout to="/" className="" title="Выход">
+              <Avatar size={36} src="https://joeschmoe.io/api/v1/random" />
+              <Logout className="" title="Выход" onClick={onExit}>
                 <ExitIcon />
               </Logout>
             </HeaderAccount>
@@ -58,7 +58,9 @@ const Layout = () => {
               <Route path="" element={<Navigate to="craft-beer/russia" />} />
             </Routes>
           </Content>
-          <Footer> какая то информация</Footer>
+          <Footer>
+            <h1>Алкоголь вредит вашему здоровью</h1>
+          </Footer>
         </Main>
       </Wrapper>
     </>

@@ -11,7 +11,7 @@ export const MenuStyled = styled(antd.Layout.Sider)`
   overflow: auto;
   height: 100vh;
   left: 0;
-  background-color: #edc7b7;
+  background-color: #f7f3e9;
   box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.2);
 `;
 
@@ -28,18 +28,13 @@ export const MenuItem = styled(router.NavLink)`
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
-  background-color: #eee2dc;
+  background-color: #cfb190;
   min-height: 40px;
   padding-left: 10px;
-  border-bottom: 1px solid #ac3b61;
-
-  &:first-child {
-    border-top: 1px solid #ac3b61;
-  }
 
   &:hover {
     transition: 0.5s;
-    background-color: #ac3b61;
+    background-color: #0a3f35;
     color: #fff;
 
     u {
@@ -48,7 +43,7 @@ export const MenuItem = styled(router.NavLink)`
   }
 
   &.active {
-    background-color: #ac3b61;
+    background-color: #0a3f35;
     color: #fff;
 
     u {
@@ -57,7 +52,7 @@ export const MenuItem = styled(router.NavLink)`
   }
 
   u {
-    color: #123c69;
+    color: #0a3f35;
     text-decoration: none;
   }
   svg {
@@ -76,42 +71,50 @@ export const HeaderWrapper = styled(antd.Layout.Header)`
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background: #edc7b7;
+  background: #f7f3e9;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 0 15px;
 `;
+
 export const HeaderAccount = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100px;
 `;
+
 export const Avatar = styled(antd.Avatar)`
-  background: #ac3b61;
+  background: #0a3f35;
 `;
-export const Logout = styled(router.NavLink)`
-  color: #123c69;
+
+export const Logout = styled.div`
+  color: #0a3f35;
   margin-left: 10px;
+  cursor: pointer;
 
   svg {
     margin-top: 5px;
-    fill: #ac3b61;
+    fill: #0a3f35;
   }
 `;
 
 export const Content = styled(antd.Layout.Content)`
   margin: 30px 0;
-  background: #edc7b7;
+  background: #f7f3e9;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 15px 0 0 15px;
+  overflow: hidden;
 `;
 
 export const Footer = styled(antd.Layout.Footer)`
   box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
-  background: #edc7b7;
+  background: #f7f3e9;
   height: 40px;
+  border-radius: 15px 0 0 0;
 `;
 export const Title = styled.div`
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  color: #123c69;
+  color: #0a3f35;
 `;

@@ -4,7 +4,7 @@ import * as router from "react-router-dom";
 export const Nav = styled.div`
   display: flex;
   min-height: 40px;
-  background-color: #eee2dc;
+  background-color: #cfb190;
 `;
 
 export const NavLink = styled(router.NavLink)`
@@ -18,7 +18,7 @@ export const NavLink = styled(router.NavLink)`
 
   &:hover {
     transition: 0.5s;
-    background-color: #ac3b61;
+    background-color: #0a3f35;
     color: #fff;
 
     u {
@@ -27,7 +27,7 @@ export const NavLink = styled(router.NavLink)`
   }
 
   &.active {
-    background-color: #ac3b61;
+    background-color: #0a3f35;
     color: #fff;
 
     u {
@@ -36,7 +36,7 @@ export const NavLink = styled(router.NavLink)`
   }
 
   u {
-    color: #123c69;
+    color: #0a3f35;
     text-decoration: none;
   }
 `;
